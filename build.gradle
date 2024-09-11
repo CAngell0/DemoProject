@@ -29,7 +29,7 @@ test {
 sourceSets {
     main {
         java {
-            srcDirs = ["src", "main/java","tests"]
+            srcDirs = ["src", "main/java","controller"]
 	}
     }
     test {
@@ -39,6 +39,17 @@ sourceSets {
     }
 }
 
+/* Added this to make the DemoProject.jar executable runnable.
+   This is so I can use it to test run my code during development.
+   - Carson
+*/
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'demo.controller.Runner'
+        )
+    }
+}
 /*  This is in here for debugging purposes. Not strictly needed. 
     Gives some info on where gradle is currently looking for filess.
 */
