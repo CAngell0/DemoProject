@@ -11,8 +11,18 @@ public class Controller {
    }
 
    public void start(){
-      askQuestions();
+      // askQuestions();
+      practiceStringMethods();
       keyboardInput.close();
+   }
+
+   private void practiceStringMethods(){
+      String myName = "Carson Angell";
+      System.out.println("Length of my name is: " + myName.length());
+      
+      //Got just my first name
+      String part = myName.substring(0, 6);
+      System.out.println(part);
    }
 
    private void askQuestions(){
