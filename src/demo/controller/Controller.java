@@ -16,21 +16,37 @@ public class Controller {
    }
 
    private void practiceWhileLoops() {
-      int count = 10;
 
+      int count = 10;
       while (count > 0){
          System.out.println("The count is: " + count);
          count -= 2;
       }
 
-      boolean isFinished = false;
       String input = "";
-
-      while (!isFinished) {
+      while (!input.trim().equalsIgnoreCase("stop")) 
+      {
          System.out.println("Keep going");
          input = keyboardInput.nextLine();
+      }
 
-         isFinished = input.equalsIgnoreCase("stop");
+      boolean isFinished = false;
+      String[] namePair = {"",""};
+      System.out.println("");
+      while (!isFinished){
+         if (!namePair[0].equalsIgnoreCase("carson"))
+         {
+            System.out.println("What is your first name?");
+            namePair[0] = keyboardInput.nextLine();
+         } else if (!namePair[1].equalsIgnoreCase("angell"))
+         {
+               System.out.println("What is your last name?");
+               namePair[1] = keyboardInput.nextLine();
+         } else 
+         {
+            System.out.println("Your name is Carson Angell!");
+            isFinished = true;
+         }
       }
    }
 
