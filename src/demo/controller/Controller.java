@@ -11,7 +11,7 @@ public class Controller {
    }
 
    public void start(){
-      practiceWhileLoops();
+      practiceForLoops();
       keyboardInput.close();
    }
 
@@ -48,6 +48,10 @@ public class Controller {
             isFinished = true;
          }
       }
+   }
+
+   private void practiceForLoops() {
+      
    }
 
    private void practiceNestedIfs() {
