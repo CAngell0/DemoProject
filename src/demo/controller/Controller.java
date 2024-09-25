@@ -11,7 +11,7 @@ public class Controller {
    }
 
    public void start(){
-      practiceForLoops();
+      practiceLoopsWithStrings();
       keyboardInput.close();
    }
 
@@ -51,7 +51,38 @@ public class Controller {
    }
 
    private void practiceForLoops() {
-      
+      for (int count = 0; count < 10; count++){
+         System.out.println("Count is: " + count);
+      }
+
+      for (int count = 10; count >= 0; count--){
+         System.out.println("Backwards count is: " + count);
+      }
+
+      for (int count = 10; count < Math.pow(10, 6); count = count * 10){
+         System.out.println("Multiplied count is: " + count);
+      }
+
+      int inputNumber = -1;
+      System.out.println("\nCount to ten!");
+      for (int count = 1; count < 11; count++){
+         while (inputNumber != count){
+            inputNumber = keyboardInput.nextInt();
+            keyboardInput.nextLine();
+         }
+         System.out.println("Correct!");
+      }
+   }
+
+   private void practiceLoopsWithStrings() {
+      String example = "Hello World!";
+      for (int index = 0; index < example.length(); index++){
+         System.out.println("Current letter at " + index + " is: " + example.substring(index, index + 1));
+      }
+
+      for (int index = example.length() - 1; index >= 0; index--){
+         System.out.println("Backwards letter at " + index + " is: " + example.substring(index, index + 1));
+      }
    }
 
    private void practiceNestedIfs() {
