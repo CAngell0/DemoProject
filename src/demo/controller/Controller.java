@@ -11,13 +11,30 @@ public class Controller {
    }
 
    public void start(){
-      // askQuestions();
-      // pacticeSubstr();
-      practiceEquals();
+      practiceWhileLoops();
       keyboardInput.close();
    }
 
-   private void practiceUsingNestedIfs() {
+   private void practiceWhileLoops() {
+      int count = 10;
+
+      while (count > 0){
+         System.out.println("The count is: " + count);
+         count -= 2;
+      }
+
+      boolean isFinished = false;
+      String input = "";
+
+      while (!isFinished) {
+         System.out.println("Keep going");
+         input = keyboardInput.nextLine();
+
+         isFinished = input.equalsIgnoreCase("stop");
+      }
+   }
+
+   private void practiceNestedIfs() {
       System.out.println("Did you give the mouse a brownie?");
       String response = keyboardInput.next();
 
