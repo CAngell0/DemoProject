@@ -1,6 +1,7 @@
 package demo.controller;
 
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class Controller {
 
@@ -11,7 +12,7 @@ public class Controller {
    }
 
    public void start(){
-      practiceLoopsWithStrings();
+      practiceArrayLists();
       keyboardInput.close();
    }
 
@@ -190,5 +191,10 @@ public class Controller {
       for (int i = 0; i < results.length; i++){
          System.out.println(i + ". " + results[i]);
       }
+   }
+
+   private void practiceArrayLists(){
+      ArrayList<String> words = new ArrayList<String>();
+      
    }
 }
