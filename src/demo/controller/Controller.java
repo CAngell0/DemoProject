@@ -196,5 +196,21 @@ public class Controller {
    private void practiceArrayLists(){
       ArrayList<String> words = new ArrayList<String>();
       
+      words.add("first in the list");
+      System.out.println("Here is the item in the list: " + words.get(0));
+
+      String input = "";
+      while (!input.equalsIgnoreCase("quit")){
+         System.out.println("Type items for the list or quit");
+         input = keyboardInput.nextLine();
+         words.add(input);
+      }
+
+      for (int count = 1; count <= 10; count++){
+         words.add("Item" + count);
+      }
+      for (int index = 0; index < words.size(); index++){
+         System.out.println("Index " + index + " = " + words.get(index));
+      }
    }
 }
