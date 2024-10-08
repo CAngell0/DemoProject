@@ -2,6 +2,7 @@ package demo.controller;
 
 import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Controller {
 
@@ -12,7 +13,7 @@ public class Controller {
    }
 
    public void start(){
-      practiceArrayLists();
+      practiceIterator();
       keyboardInput.close();
    }
 
@@ -211,6 +212,19 @@ public class Controller {
       }
       for (int index = 0; index < words.size(); index++){
          System.out.println("Index " + index + " = " + words.get(index));
+      }
+   }
+
+   private void practiceIterator(){
+      ArrayList<Integer> testList = new ArrayList<Integer>();
+      for (int count = 4; count < 10; count ++) testList.add(count);
+
+      for (Iterator<Integer> list = testList.iterator(); list.hasNext();){
+         System.out.println(list.next());
+      }
+
+      for (Object item : testList.toArray()){
+         System.out.println(item);
       }
    }
 }
