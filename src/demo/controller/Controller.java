@@ -4,17 +4,21 @@ import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.Iterator;
 
+import demo.view.Popup;
+
 public class Controller {
 
    private Scanner keyboardInput;
+   private Popup view;
 
    public Controller(){
       this.keyboardInput = new Scanner(System.in);
+      this.view = new Popup();
    }
 
    public void start(){
-      practiceIterator();
-      keyboardInput.close();
+      this.view.displayMessage("Hello World!");
+      this.keyboardInput.close();
    }
 
    private void practiceWhileLoops() {
