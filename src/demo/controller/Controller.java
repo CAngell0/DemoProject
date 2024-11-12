@@ -17,7 +17,7 @@ public class Controller {
    }
 
    public void start(){
-      this.view.displayMessage("Hello World!");
+      this.view.askQuestion("Who are you?");
       this.keyboardInput.close();
    }
 
