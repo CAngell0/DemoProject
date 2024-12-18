@@ -17,7 +17,10 @@ public class Controller {
    }
 
    public void start(){
-      this.view.askQuestion("Who are you?");
+      // this.view.displayMessage("Welcome to GUI");
+      // String userInput = view.askQuestion("What is your favorite food?");
+      // view.displayMessage(userInput);
+      practiceArrayLists();
       this.keyboardInput.close();
    }
 
@@ -202,12 +205,14 @@ public class Controller {
       ArrayList<String> words = new ArrayList<String>();
       
       words.add("first in the list");
-      System.out.println("Here is the item in the list: " + words.get(0));
+      // System.out.println("Here is the item in the list: " + words.get(0));
+      view.displayMessage("Here is the item in the list: " + words.get(0));
 
       String input = "";
       while (!input.equalsIgnoreCase("quit")){
-         System.out.println("Type items for the list or quit");
-         input = keyboardInput.nextLine();
+         // System.out.println("Type items for the list or quit");
+         input = view.askQuestion("Type items for the list or type 'quit'");
+         // input = keyboardInput.nextLine();
          words.add(input);
       }
 
@@ -215,7 +220,8 @@ public class Controller {
          words.add("Item" + count);
       }
       for (int index = 0; index < words.size(); index++){
-         System.out.println("Index " + index + " = " + words.get(index));
+         // System.out.println("Index " + index + " = " + words.get(index));
+         view.displayMessage("Index " + index + " = " + words.get(index));
       }
    }
 
